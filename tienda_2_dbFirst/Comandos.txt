@@ -1,0 +1,59 @@
+//Generar Solucion
+
+dotnet new sln 
+
+//Crear Proyecto Web API
+dotnet new webapi -o API
+
+//Agregar proyecto API a Solucion
+dotnet sln add .\API\
+
+//Verificar 
+dotnet sln list
+
+//Agregar proyectos Core y Infraestructure mediante libreria de clases
+
+dotnet new classlib -o Core
+dotnet new classlib -o Infraestructure
+
+// Agregar proyectos Core e Infraestructure a Solucion
+dotnet sln add .\Core
+dotnet sln add .\Infraestructure
+
+dotnet sln list
+
+//Agregar referencia
+cd .\Infraestructure\
+dotnet add reference ..\Core\
+cd ..
+
+//Agregar referencia a proyecto API
+cd API
+dotnet add reference ..\Infraestructure
+cd ..
+
+/////////////////////////////////////
+
+//Ingenieria inversa a base de datos
+cd API
+dotnet add package Microsoft.EntityFrameworkCore.Design
+cd ..
+
+//Instalar paquete EntityFramework y database provider SQL Server
+cd Infraestructure
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+
+//Especificar cadena de conexion a base de datos
+cd ..
+dotnet ef dbcontext scaffold "Server=localhost;User=sa;Password=Jpsd122448_;Database=tiendaBD_2;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -s API -p Infraestructure --context TiendaContext --context-dir Data --output-dir Entities
+
+
+////////////////////////////
+
+//Establecer primera migracion
+dotnet ef migrations add InitialCreate -p Infraestructure -s API -o Data\Migrations
+
+//Generar script para tabla de migraciones
+cd ..
+dotnet ef migrations script -p Infraestructure -s API 
+

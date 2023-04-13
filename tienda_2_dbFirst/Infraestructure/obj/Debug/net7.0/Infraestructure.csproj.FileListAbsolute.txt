@@ -1,0 +1,15 @@
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\bin\Debug\net7.0\Infraestructure.deps.json
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\bin\Debug\net7.0\Infraestructure.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\bin\Debug\net7.0\Infraestructure.pdb
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\bin\Debug\net7.0\Core.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\bin\Debug\net7.0\Core.pdb
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\obj\Debug\net7.0\Infraestructure.csproj.AssemblyReference.cache
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\obj\Debug\net7.0\Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\obj\Debug\net7.0\Infraestructure.AssemblyInfoInputs.cache
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\obj\Debug\net7.0\Infraestructure.AssemblyInfo.cs
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\obj\Debug\net7.0\Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\obj\Debug\net7.0\Infraestructure.csproj.CopyComplete
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\obj\Debug\net7.0\Infraestructure.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\obj\Debug\net7.0\refint\Infraestructure.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\obj\Debug\net7.0\Infraestructure.pdb
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_2_dbFirst\Infraestructure\obj\Debug\net7.0\ref\Infraestructure.dll
