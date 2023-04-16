@@ -1,16 +1,19 @@
 using API.Extensions;
 using Infraestructure.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
+
 // Add services to the container.
 
-builder.Services.ConfigureCors();
+builder.Services.ConfigureCors(); //Method added from Application service extensions
 builder.Services.AddAplicacionServices();
 
 builder.Services.AddControllers();
-
+//builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 
 builder.Services.AddDbContext<TiendaContext>(options =>
 {

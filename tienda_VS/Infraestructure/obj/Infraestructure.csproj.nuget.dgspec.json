@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jposada\\Documents\\Groware\\Course Tests\\.NET API\\tienda_VS\\Infraestructure\\Infraestructure.csproj": {}
+    "C:\\Users\\Juan Posada\\Documents\\Groware Test\\ASP.NET-Core-7-API-Example\\tienda_VS\\Infraestructure\\Infraestructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jposada\\Documents\\Groware\\Course Tests\\.NET API\\tienda_VS\\Core\\Core.csproj": {
+    "C:\\Users\\Juan Posada\\Documents\\Groware Test\\ASP.NET-Core-7-API-Example\\tienda_VS\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jposada\\Documents\\Groware\\Course Tests\\.NET API\\tienda_VS\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Juan Posada\\Documents\\Groware Test\\ASP.NET-Core-7-API-Example\\tienda_VS\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\jposada\\Documents\\Groware\\Course Tests\\.NET API\\tienda_VS\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\jposada\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jposada\\Documents\\Groware\\Course Tests\\.NET API\\tienda_VS\\Core\\obj\\",
+        "projectPath": "C:\\Users\\Juan Posada\\Documents\\Groware Test\\ASP.NET-Core-7-API-Example\\tienda_VS\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\Juan Posada\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Juan Posada\\Documents\\Groware Test\\ASP.NET-Core-7-API-Example\\tienda_VS\\Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jposada\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Juan Posada\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,21 +60,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jposada\\Documents\\Groware\\Course Tests\\.NET API\\tienda_VS\\Infraestructure\\Infraestructure.csproj": {
+    "C:\\Users\\Juan Posada\\Documents\\Groware Test\\ASP.NET-Core-7-API-Example\\tienda_VS\\Infraestructure\\Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jposada\\Documents\\Groware\\Course Tests\\.NET API\\tienda_VS\\Infraestructure\\Infraestructure.csproj",
+        "projectUniqueName": "C:\\Users\\Juan Posada\\Documents\\Groware Test\\ASP.NET-Core-7-API-Example\\tienda_VS\\Infraestructure\\Infraestructure.csproj",
         "projectName": "Infraestructure",
-        "projectPath": "C:\\Users\\jposada\\Documents\\Groware\\Course Tests\\.NET API\\tienda_VS\\Infraestructure\\Infraestructure.csproj",
-        "packagesPath": "C:\\Users\\jposada\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jposada\\Documents\\Groware\\Course Tests\\.NET API\\tienda_VS\\Infraestructure\\obj\\",
+        "projectPath": "C:\\Users\\Juan Posada\\Documents\\Groware Test\\ASP.NET-Core-7-API-Example\\tienda_VS\\Infraestructure\\Infraestructure.csproj",
+        "packagesPath": "C:\\Users\\Juan Posada\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Juan Posada\\Documents\\Groware Test\\ASP.NET-Core-7-API-Example\\tienda_VS\\Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jposada\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Juan Posada\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,14 +86,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\jposada\\Documents\\Groware\\Course Tests\\.NET API\\tienda_VS\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\jposada\\Documents\\Groware\\Course Tests\\.NET API\\tienda_VS\\Core\\Core.csproj"
+              "C:\\Users\\Juan Posada\\Documents\\Groware Test\\ASP.NET-Core-7-API-Example\\tienda_VS\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Juan Posada\\Documents\\Groware Test\\ASP.NET-Core-7-API-Example\\tienda_VS\\Core\\Core.csproj"
               }
             }
           }
@@ -134,7 +144,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

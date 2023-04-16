@@ -17,8 +17,8 @@ public class Producto : BaseEntity
 
     public int MarcaId { get; set; }
 
-    public Categoria Categoria { get; set; }
+    public Categoria Categoria { get; set; } //Se debe enviar como campo opcional para realizar peticion POST si no se realiza mapeo con AutoMap
 
-    public Marca Marca { get; set; }
+    public Marca Marca { get; set; } //Se debe enviar como campo opcional para realizar peticion POST si no se realiza mapeo con AutoMap
 }
 
