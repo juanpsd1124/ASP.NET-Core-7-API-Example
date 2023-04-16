@@ -190,3 +190,6 @@ C:\Users\Juan Posada\Documents\Groware Test\ASP.NET-Core-7-API-Example\tienda_VS
 C:\Users\Juan Posada\Documents\Groware Test\ASP.NET-Core-7-API-Example\tienda_VS\API\obj\Debug\net6.0\ref\API.dll
 C:\Users\Juan Posada\Documents\Groware Test\ASP.NET-Core-7-API-Example\tienda_VS\API\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Juan Posada\Documents\Groware Test\ASP.NET-Core-7-API-Example\tienda_VS\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Juan Posada\Documents\Groware Test\ASP.NET-Core-7-API-Example\tienda_VS\API\bin\Debug\net6.0\AspNetCoreRateLimit.dll
+C:\Users\Juan Posada\Documents\Groware Test\ASP.NET-Core-7-API-Example\tienda_VS\API\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Juan Posada\Documents\Groware Test\ASP.NET-Core-7-API-Example\tienda_VS\API\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll

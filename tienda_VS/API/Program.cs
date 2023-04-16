@@ -1,4 +1,5 @@
 using API.Extensions;
+using AspNetCoreRateLimit;
 using Infraestructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
@@ -6,13 +7,20 @@ using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
+builder.Services.ConfigureRateLimiting();   
 
 // Add services to the container.
 
 builder.Services.ConfigureCors(); //Method added from Application service extensions
 builder.Services.AddAplicacionServices();
+builder.Services.ConfigureApiVersioning();  
 
-builder.Services.AddControllers();
+builder.Services.AddControllers( options =>
+{
+    options.RespectBrowserAcceptHeader = true;  
+    options.ReturnHttpNotAcceptable = true; //Envia error si el cliente solicita un formato no soportado
+}).AddXmlSerializerFormatters();
+
 //builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 
 builder.Services.AddDbContext<TiendaContext>(options =>
@@ -27,6 +35,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseIpRateLimiting();    
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

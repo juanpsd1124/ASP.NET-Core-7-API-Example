@@ -1,4 +1,5 @@
 ﻿using API.Dtos;
+using API.Helpers;
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
@@ -8,6 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
+    [ApiVersion("1.0")]
+    [ApiVersion("1.1")]
     public class ProductosController : BaseApiController
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -30,13 +33,46 @@ namespace API.Controllers
 
 
         [HttpGet]
+        [MapToApiVersion("1.0")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<IEnumerable<ProductoListDto>>> Get()
+        public async Task<ActionResult<Pager<ProductoListDto>>> Get([FromQuery] Params productParams)
+        {
+            var resultado = await _unitOfWork.Productos
+                                        .GetAllAsync(productParams.PageIndex, productParams.PageSize, productParams.Search);
+
+            var listaProductosDto = _mapper.Map<List<ProductoListDto>>(resultado.registros);
+
+            Response.Headers.Add("X-InlineCount", resultado.totalRegistros.ToString() );
+
+            return new Pager<ProductoListDto>(listaProductosDto, resultado.totalRegistros,
+                productParams.PageIndex, productParams.PageSize, productParams.Search);
+        }
+
+        //Metodo para obtener lista de productos sin Pager
+        //[HttpGet]
+        //[MapToApiVersion("1.0")]
+        //[ProducesResponseType(StatusCodes.Status200OK)]
+        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
+        //public async Task<ActionResult<IEnumerable<ProductoDto>>> Get()
+        //{
+        //    var productos = await _unitOfWork.Productos.GetAllAsync();
+        //    return _mapper.Map<List<ProductoDto>>(productos); //Se devuelve respuesta con Automapper
+        //}
+
+
+        //Version 1.1 de metodo para obtener lista de productos
+
+        [HttpGet]
+        [MapToApiVersion("1.1")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<IEnumerable<ProductoListDto>>> Get11()
         {
             var productos = await _unitOfWork.Productos.GetAllAsync();
             return _mapper.Map<List<ProductoListDto>>(productos); //Se devuelve respuesta con Automapper
         }
+
 
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
