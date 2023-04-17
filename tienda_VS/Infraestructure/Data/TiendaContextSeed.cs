@@ -15,6 +15,8 @@ public class TiendaContextSeed
         {
             var ruta = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
+            Console.WriteLine(ruta);
+
             if (!context.Marcas.Any())
             {
                 using (var readerMarcas = new StreamReader(ruta + @"/Data/Csvs/marcas.csv"))
