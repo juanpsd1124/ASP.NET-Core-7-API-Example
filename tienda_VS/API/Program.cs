@@ -13,7 +13,8 @@ builder.Services.ConfigureRateLimiting();
 
 builder.Services.ConfigureCors(); //Method added from Application service extensions
 builder.Services.AddAplicacionServices();
-builder.Services.ConfigureApiVersioning();  
+builder.Services.ConfigureApiVersioning();
+builder.Services.AddJwt(builder.Configuration);
 
 builder.Services.AddControllers( options =>
 {
@@ -55,6 +56,7 @@ using (var scope = app.Services.CreateScope())
         var context = services.GetRequiredService<TiendaContext>();
         await context.Database.MigrateAsync();
         await TiendaContextSeed.SeedAsync(context, loggerFactory);
+        await TiendaContextSeed.SeedRolesAsync(context, loggerFactory);
     }
     catch (Exception ex)
     {
@@ -67,6 +69,8 @@ using (var scope = app.Services.CreateScope())
 app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();    
 
 app.UseAuthorization();
 
