@@ -209,3 +209,12 @@ C:\Users\Juan Posada\Documents\Groware Test\ASP.NET-Core-7-API-Example\tienda_VS
 C:\Users\Juan Posada\Documents\Groware Test\ASP.NET-Core-7-API-Example\tienda_VS\API\bin\Debug\net6.0\Serilog.Sinks.Console.dll
 C:\Users\Juan Posada\Documents\Groware Test\ASP.NET-Core-7-API-Example\tienda_VS\API\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
 C:\Users\Juan Posada\Documents\Groware Test\ASP.NET-Core-7-API-Example\tienda_VS\API\bin\Debug\net6.0\Serilog.Sinks.File.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_VS\API\bin\Debug\net6.0\Serilog.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_VS\API\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_VS\API\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_VS\API\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_VS\API\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_VS\API\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_VS\API\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_VS\API\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\Users\jposada\Documents\Groware\Course Tests\.NET API\tienda_VS\API\bin\Debug\net6.0\Serilog.Sinks.File.dll

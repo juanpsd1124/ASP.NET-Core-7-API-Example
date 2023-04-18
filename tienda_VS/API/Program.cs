@@ -32,6 +32,7 @@ builder.Services.AddControllers( options =>
     options.ReturnHttpNotAcceptable = true; //Envia error si el cliente solicita un formato no soportado
 }).AddXmlSerializerFormatters();
 
+builder.Services.AddValidationErrors();
 //builder.Services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 
 builder.Services.AddDbContext<TiendaContext>(options =>
@@ -48,6 +49,8 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 app.UseMiddleware<ExceptionMiddleware>();
+
+app.UseStatusCodePagesWithReExecute("/errors/{0}");
 
 app.UseIpRateLimiting();    
 
