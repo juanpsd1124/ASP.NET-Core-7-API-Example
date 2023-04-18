@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RcQoh3wV4kKaYNaXwUUzaPt3TmlMAs5agc+Oqg80+Nx4hrDdob+BTebRAsGvAAApnessHdoneSf5gEwn72kxuw==",
+  "dgSpecHash": "bVHdeHztyemh9UJiITh00rYJ7r7OuaPyYL8dlTBTJGRC5B0gFGW19ARpaT9HiqfhdWFmUELZRW5Zd9JqIP2YVQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jposada\\Documents\\Groware\\Course Tests\\.NET API\\tienda_VS\\Core\\Core.csproj",
+  "projectFilePath": "C:\\Users\\Juan Posada\\Documents\\Groware Test\\ASP.NET-Core-7-API-Example\\tienda_VS\\Core\\Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

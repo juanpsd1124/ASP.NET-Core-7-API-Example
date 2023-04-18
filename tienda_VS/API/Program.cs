@@ -1,10 +1,20 @@
 using API.Extensions;
+using API.Helpers.Errors;
 using AspNetCoreRateLimit;
 using Infraestructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var logger = new LoggerConfiguration()
+                    .ReadFrom.Configuration(builder.Configuration)
+                    .Enrich.FromLogContext()
+                    .CreateLogger();
+
+//builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
 
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 builder.Services.ConfigureRateLimiting();   
@@ -37,6 +47,8 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseMiddleware<ExceptionMiddleware>();
+
 app.UseIpRateLimiting();    
 
 // Configure the HTTP request pipeline.
@@ -60,8 +72,8 @@ using (var scope = app.Services.CreateScope())
     }
     catch (Exception ex)
     {
-        var logger = loggerFactory.CreateLogger<Program>();
-        logger.LogError(ex, "Ocurrio un error durante la migración");
+        var logger_ = loggerFactory.CreateLogger<Program>();
+        logger_.LogError(ex, "Ocurrio un error durante la migración");
     }
 }
 
