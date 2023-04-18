@@ -17,37 +17,47 @@ public class ProductoRepository : GenericRepository<Producto>, IProductoReposito
                         .Take(cantidad)
                         .ToListAsync();
 
-    public override async Task<Producto> GetByIdAsync(int id)
+    public override async Task<Producto> GetByIdAsync(int id, bool noTracking = true)
     {
-        return await _context.Productos
+        var queryProducto = noTracking ? _context.Productos.AsNoTracking()
+                                       : _context.Productos;
+
+        return await queryProducto
                         .Include(p => p.Marca)
                         .Include(p => p.Categoria)
                         .FirstOrDefaultAsync(p => p.Id == id);
 
     }
 
-    public override async Task<IEnumerable<Producto>> GetAllAsync()
+    public override async Task<IEnumerable<Producto>> GetAllAsync(bool noTracking = true)
     {
-        return await _context.Productos
+        var queryProducto = noTracking ? _context.Productos.AsNoTracking()
+                                       : _context.Productos;
+
+
+        return await queryProducto
                         .Include(u => u.Marca)
                         .Include(u => u.Categoria)
                         .ToListAsync();
     }
 
-    public override async Task<(int totalRegistros, IEnumerable<Producto> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+    public override async Task<(int totalRegistros, IEnumerable<Producto> registros)> GetAllAsync(int pageIndex, int pageSize, string search, bool noTracking = true)
     {
+        var queryProducto = noTracking ? _context.Productos.AsNoTracking()
+                                       : _context.Productos;
+
         var consulta = _context.Productos as IQueryable<Producto>;
 
         if (!String.IsNullOrEmpty(search))
         {
-            consulta = consulta.Where(p => p.Nombre.ToLower().Contains(search ) );
+            queryProducto = queryProducto.Where(p => p.Nombre.ToLower().Contains(search ) );
         
         }
 
-        var totalRegistros = await consulta
+        var totalRegistros = await queryProducto
                                     .CountAsync();
 
-        var registros = await consulta
+        var registros = await queryProducto
                                 .Include(u => u.Marca)
                                 .Include(u => u.Categoria)
                                 .Skip((pageIndex - 1) * pageSize)
